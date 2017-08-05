@@ -19,7 +19,7 @@
       <p>Web Developer from Toronto, Ontario</p>
     </div>
 
-    <nav>
+    <nav class="navbar">
       <ul>
         <li><a href="" class="" id="">Home</a></li>
         <li><a href="" class="" id="">About</a></li>
@@ -56,6 +56,22 @@
     </div>
 
     <script>
+
+      const nav = document.querySelector('.navbar');
+      let topOfNav = nav.offsetTop;
+  
+      function fixNav() {
+        if(window.scrollY >= topOfNav) {
+          document.body.style.paddingTop = nav.offsetHeight + 'px';
+          document.body.classList.add('fixed-nav');
+        } else {
+          document.body.classList.remove('fixed-nav');
+          document.body.style.paddingTop = 0;
+        }
+      }
+
+      window.addEventListener('scroll', fixNav);
+
     </script>
 
   </body>
