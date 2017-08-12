@@ -56,6 +56,9 @@ div {
   flex-direction: column;
 }
 
+.contact img {
+  height: 40px;
+}
 
 .description {
   color: #27292C;
