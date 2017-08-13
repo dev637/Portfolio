@@ -73,7 +73,17 @@ div {
 }
 
 .contact {
- background-color: #9298A7
+  background-color: #9298A7;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -123,6 +133,7 @@ nav a {
   position: fixed;
   box-shadow: 0 5px 0 rgba(0,0,0,0.1);
 }
+
 
 
 /* --------------------------------------
