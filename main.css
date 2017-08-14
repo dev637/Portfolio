@@ -88,6 +88,10 @@ div {
   justify-content: space-around;
 }
 
+.active {
+  background-color: #C60C0C;
+}
+
 .footer {
   background-color: #2F3034
 }
