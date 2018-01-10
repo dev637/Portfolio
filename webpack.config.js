@@ -19,7 +19,15 @@ module.exports = {
                     fallback: "style-loader",
                     use: ["css-loader?url=false"]
                 }),
-            },
+            }, {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        attrs: [':data-src']
+                    }
+                }
+            }
 
         ]
     },
