@@ -38,7 +38,6 @@ module.exports = {
             // ./public directory is being served 
             host: 'localhost',
             port: 3000,
-            files: ['/*.html'],
             server: true
         })
     ],
