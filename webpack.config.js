@@ -9,6 +9,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/dist/',
         filename: '[name].bundle.js'
     },
     module: {
@@ -40,6 +41,12 @@ module.exports = {
             port: 3000,
             server: true
         })*/
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin()
     ],
+    devtool: 'cheap-eval-source-map',
+    devServer: {
+        compress: true,
+    },
     watch: true
 };

@@ -13,7 +13,8 @@
     "postcss-loader": "^1.1.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.18.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
   },
   "dependencies": {}
 }
