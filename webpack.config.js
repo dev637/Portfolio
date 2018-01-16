@@ -16,10 +16,10 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
+                use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: ["css-loader?url=false"]
-                }),
+                })),
             }, {
                 test: /\.(html)$/,
                 use: {
@@ -46,6 +46,7 @@ module.exports = {
     ],
     devtool: 'cheap-eval-source-map',
     devServer: {
+        hot: true,
         compress: true,
     },
     watch: true
