@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "browser-sync": "^2.23.3",
