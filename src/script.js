@@ -2,6 +2,7 @@
 
 require('./style.scss');
 require('../index.html');
+require('./app.js');
 
 console.log('foo');
 
