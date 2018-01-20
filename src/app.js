@@ -32,11 +32,11 @@ var sections = {};
 var i = 0;
 
 Array.prototype.forEach.call(section, function(e){
-  sections[e.id] = e.offsetTop;
+  sections[e.id] = e.offsetTop - nav.offsetHeight;
 });
 
 window.onscroll = function() {
-  var scrollPosition = document.body.scrollTop;
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
   for (i in sections) {
     if (sections[i] <= scrollPosition) {
       document.querySelector('.active').setAttribute('class', ' ');
