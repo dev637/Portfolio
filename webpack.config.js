@@ -48,6 +48,6 @@ module.exports = {
     devServer: {
         hot: true,
         compress: true,
+        watchContentBase: true,
     },
-    watch: true
 };
