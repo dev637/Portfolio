@@ -21,9 +21,7 @@ $(".navbar a").click(function (e) {
   var target = this.hash, $target = $(target);
   $('html, body').stop().animate({
     'scrollTop': $target.offset().top - nav.offsetHeight
-    }, 900, 'swing', function () {
-      window.location.hash = target;
-  });
+    }, 900, 'swing');
 })
 
 // Navbar scrollspy
