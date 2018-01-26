@@ -65,8 +65,14 @@ div {
 }
 
 .skills {
-  background-color: #484C56
+  background-color: #484C56;  
 }
+
+.skills > i {
+    font-size: 8em;
+    display: inline-block;
+    padding: 50px 20px;
+  }
 
 .projects {
   background-color: #313236
@@ -138,12 +144,6 @@ nav a {
 .fixed-nav nav {
   position: fixed;
   box-shadow: 0 5px 0 rgba(0,0,0,0.1);
-}
-
-.icon {
-  font-size: 8em;
-  display: inline-block;
-  padding: 50px 20px;
 }
 
 /* --------------------------------------
