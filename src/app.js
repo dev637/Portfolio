@@ -42,3 +42,15 @@ window.onscroll = function() {
     }
   }
 }
+
+// Hover icon color
+
+var devicons = document.querySelectorAll("[class^=devicon]");
+$(devicons).hover(
+  function(){
+    $(this).addClass("colored");
+  },
+  function(){
+    $(this).removeClass("colored");
+  }
+);
