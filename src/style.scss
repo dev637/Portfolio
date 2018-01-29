@@ -75,7 +75,15 @@ div {
 }
 
 .projects {
-  background-color: #313236
+  color: black;
+
+    .project {
+    width: 300px;
+    height: 150px;
+    background: whitesmoke;
+    border-radius: 5%;
+    margin: 50px;
+  }
 }
 
 .contact {
@@ -151,14 +159,6 @@ nav {
   border-radius: 200px;
   height: 200px;
   background: lightblue;
-  margin: 50px;
-}
-
-.project {
-  width: 300px;
-  height: 150px;
-  background: white;
-  border-radius: 5%;
   margin: 50px;
 }
 
