@@ -16,7 +16,7 @@ function fixNav() {
 window.addEventListener('scroll', fixNav);
 
 // Navbar smooth scrolling
-$(".navbar a").click(function (e) {
+$(".navbar_custom a").click(function (e) {
   e.preventDefault();
   var target = this.hash, $target = $(target);
   $('html, body').stop().animate({
