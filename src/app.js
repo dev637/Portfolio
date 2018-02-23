@@ -1,6 +1,6 @@
 "use strict";
 
-const nav = document.querySelector('.navbar');
+const nav = document.querySelector('.navbar_custom');
 let topOfNav = nav.offsetTop;
 
 function fixNav() {
