@@ -58,10 +58,17 @@ div {
   .skills i {
     font-size: 8em;
     display: inline-block;
-    padding: 50px 20px; }
+    padding: 50px 20px;
+    transition: 0.5s; }
 
 .projects {
-  background-color: #313236; }
+  color: black; }
+  .projects .project {
+    width: 300px;
+    height: 150px;
+    background: whitesmoke;
+    border-radius: 5%;
+    margin: 50px; }
 
 .contact {
   background-color: #9298A7; }
@@ -80,9 +87,7 @@ div {
   background-color: #C60C0C; }
 
 .footer {
-  background-color: #2F3034; }
-
-div.footer {
+  background-color: #2F3034;
   font-size: 0.5em;
   margin: 0px;
   padding: 20px; }
@@ -124,13 +129,6 @@ nav {
   border-radius: 200px;
   height: 200px;
   background: lightblue;
-  margin: 50px; }
-
-.project {
-  width: 300px;
-  height: 150px;
-  background: white;
-  border-radius: 5%;
   margin: 50px; }
 
 /* --------------------------------------
