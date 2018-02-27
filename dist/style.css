@@ -29,7 +29,7 @@ h2 {
   padding: 40px;
   font-weight: normal; }
 
-p {
+body > div > p {
   margin: 0px 200px;
   font-size: 1.5em; }
 
@@ -63,12 +63,9 @@ div {
 
 .projects {
   color: black; }
-  .projects .project {
-    width: 300px;
-    height: 150px;
-    background: whitesmoke;
-    border-radius: 5%;
-    margin: 50px; }
+  .projects p {
+    text-align: justify;
+    padding: 20px 40px; }
 
 .contact {
   background-color: #9298A7; }
