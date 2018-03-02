@@ -72,6 +72,11 @@ div {
       padding: 50px 20px;
       transition: 0.5s;
   }
+
+  div {
+    margin: 0 auto;
+    max-width: 980px;
+  }
 }
 
 .projects {
