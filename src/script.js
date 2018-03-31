@@ -1,6 +1,6 @@
 "use strict";
 
-require('./style.scss');
+require('./scss/style.scss');
 require('../index.html');
 require('./app.js');
 
