@@ -1,3 +1,4 @@
+@import "base/_global";
 @import "modules/_contact";
 @import "modules/_description";
 @import "modules/_footer";
@@ -6,28 +7,3 @@
 @import "modules/_page-section";
 @import "modules/_projects";
 @import "modules/_skills";
-
-body {
-  justify-content: center;
-  text-align: center;
-  font-family: arial;
-  margin: 0px;
-  color: white;
-}
-
-h1 {
-  margin-top: 0px;
-  padding-top: 30px;
-  font-size: 5em;
-}
-
-h2 {
-  font-size: 3em;
-  margin: 0px;
-  padding: 40px;
-  font-weight: normal
-}
-
-body>div {
-  padding: 30px;
-}
