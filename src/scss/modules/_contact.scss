@@ -1,0 +1,19 @@
+.contact {
+  background-color: #9298A7;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+}
+
+.contact img {
+  height: 40px;
+}
