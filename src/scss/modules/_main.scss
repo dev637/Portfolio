@@ -1,9 +1,19 @@
 .main {
-  background-color: #27292C;
   color: white;
   height: 80vh;
   background: url(../img/martin-sattler-160751.jpg) bottom center no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+
+	.wrapper {
+		h1 {
+	  	font-size: 5rem;
+	  	font-weight: 100;
+	  }
+	
+	  h2 {
+	  	font-size: 2rem;
+	  	font-weight: 100;
+	  }
+	}
 }
