@@ -1,5 +1,17 @@
 .description {
-  color: #27292C;
+	text-align: center;
+
+  h2 {
+  	font-size: 2.5rem;
+  	font-weight: 300;;
+  }
+
+  p {
+  	font-size: 1.09rem;
+  	max-width: 800px;
+  	width: 100%;
+		margin: 0 auto 40px;
+  }
 }
 
 .profile {
