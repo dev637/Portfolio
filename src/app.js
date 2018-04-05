@@ -25,7 +25,7 @@ $("#Navbar a").click(function (e) {
 })
 
 // Navbar scrollspy
-var section = document.querySelectorAll(".section");
+var section = document.querySelectorAll(".page-section");
 var sections = {};
 var i = 0;
 
