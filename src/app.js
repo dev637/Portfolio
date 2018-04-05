@@ -1,6 +1,6 @@
 "use strict";
 
-const nav = document.querySelector('.navbar_custom');
+const nav = document.querySelector('#Navbar');
 let topOfNav = nav.offsetTop;
 
 function fixNav() {
@@ -16,7 +16,7 @@ function fixNav() {
 window.addEventListener('scroll', fixNav);
 
 // Navbar smooth scrolling
-$(".navbar_custom a").click(function (e) {
+$("#Navbar a").click(function (e) {
   e.preventDefault();
   var target = this.hash, $target = $(target);
   $('html, body').stop().animate({
