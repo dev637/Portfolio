@@ -16,13 +16,14 @@ function fixNav() {
 window.addEventListener('scroll', fixNav);
 
 // Navbar smooth scrolling
-$("#Navbar a").click(function (e) {
-  e.preventDefault();
-  var target = this.hash, $target = $(target);
-  $('html, body').stop().animate({
-    'scrollTop': $target.offset().top - nav.offsetHeight
-    }, 900, 'swing');
-})
+var $root = $('html, body');
+
+$('a[href^="#"]').click(function () {
+    $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - nav.offsetHeight + 1
+    }, 800, 'swing');
+    return false;
+});
 
 // Navbar scrollspy
 var section = document.querySelectorAll(".page-section");
