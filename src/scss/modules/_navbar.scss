@@ -26,8 +26,8 @@ nav {
     padding: 20px;
     display: inline-block;
     color: white;
-    transition: all 0.2s;
     text-transform: uppercase;
+    transition: all .4s ease-in-out;
   }
 }
 
@@ -37,5 +37,5 @@ nav {
 }
 
 .active {
-  background-color: #C60C0C;
+  background-color: #8B0000;
 }
