@@ -15,14 +15,19 @@
     margin: 0 auto 40px;
   }
 
-  i {
-      font-size: 6.5em;
-      display: inline-block;
-      padding: 30px 20px;
-      transition: 0.5s;
+  svg {
+    height: 10rem;
+    width: 10rem;
+    padding: 25px 25px;
   }
 
   div {
     max-width: 880px;
+  }
+
+  &-icons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 }
