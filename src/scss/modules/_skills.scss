@@ -19,15 +19,23 @@
     height: 10rem;
     width: 10rem;
     padding: 25px 25px;
+
+    path {
+      transition: .5s;
+    }
   }
 
   div {
-    max-width: 880px;
+    max-width: 780px;
   }
 
   &-icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
   }
+}
+
+.svg-mask {
+  fill: white;
 }

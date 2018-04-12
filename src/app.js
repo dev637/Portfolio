@@ -46,12 +46,12 @@ window.onscroll = function() {
 
 // Hover icon color
 
-var devicons = document.querySelectorAll("[class^=devicon]");
+var devicons = document.querySelectorAll("path");
 $(devicons).hover(
   function(){
-    $(this).addClass("colored");
+    $(this).removeClass("svg-mask");
   },
   function(){
-    $(this).removeClass("colored");
-  }
+    $(this).addClass("svg-mask");
+  },
 );
