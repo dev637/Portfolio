@@ -136,12 +136,14 @@
         <h2>Contact</h2>
 
         <div class="contact-row">
-           <form accept-charset=" UTF-8" action="https://usebasin.com/f/e7bc73299859" class="contact-form" method="POST">
-            <div><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
-            <div><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
-            <div><label for="subject">Subject</label><input type="text" id="subject" name="subject"></div>
-            <div><label for="message">Message *</label><textarea rows="7" id="message" name="message" required></textarea></div>
-            <div><input type="submit" id="submit" name="submit" value="Submit"></div>
+          <form accept-charset=" UTF-8" action="https://usebasin.com/f/e7bc73299859" class="contact-form" method="POST">
+            <div class="contact-form-top">
+              <div class="contact-form-top-name"><label for="name">Name *<input type="text" placeholder="Name" id="name" name="name" required></label></div>
+              <div class="contact-form-top-email"><label for="email">Email *<input type="email" placeholder="Email" id="email" name="email" required></label></div>
+            </div>
+            <div><label for="subject">Subject<input type="text" placeholder="Subject" id="subject" name="subject"></label></div>
+            <div><label for="message">Message *</label><textarea rows="7" placeholder="Message" id="message" name="message" required></textarea></div>
+            <input type="submit" id="submit" name="submit" value="Submit">
           </form>
         </div>
       </div>
