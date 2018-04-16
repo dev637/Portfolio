@@ -6,17 +6,23 @@
     font-weight: 300;;
   }
 
+  h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 400;
+  }
+
   &-container {
     display: flex;
 
-    div {
+    > div {
       width: 50%;
       padding: 30px 0;
       p {
         text-align: left;
         margin: 0 auto;
         max-width: 540px;
-        padding: 30px 0;
+        padding: 1.5rem 0;
         font-size: 1.09rem;
       }
     }
@@ -26,7 +32,6 @@
     }
 
     div:nth-child(2n) {
-      display: inline;
       margin-left: 10px;
     }
   }
@@ -40,6 +45,7 @@
     margin: 0 auto;
     list-style: none;
     max-width: 430px;
+    font-size: .8rem;
     
     li {
       color: white;
@@ -49,5 +55,22 @@
       margin: .25rem .3rem;
       font-weight: bold;
     }
-  }  
+  }
+
+  &-links {
+    margin-top: 1.8rem;
+    
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      padding: .3rem 1rem;
+      margin: 0 1rem;
+      border: 1px solid black;
+      transition: .2s;
+
+      &:hover {
+        box-shadow: 0 5px 15px grey;
+      }
+    }
+  }
 }
