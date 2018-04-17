@@ -3,13 +3,7 @@ $contact-bg: #373A40;
 .contact {
   color: white;
   background: $contact-bg;
-  text-align: center;
-
-  h2 {
-    font-size: 2.5rem;
-    font-weight: 300;;
-  }
-
+  
 	&-row {
     max-width: 1000px;
     margin: 3rem auto 5rem;
