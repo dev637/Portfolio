@@ -1,16 +1,4 @@
 .description {
-	text-align: center;
-
-  h2 {
-  	font-size: 2.5rem;
-  	font-weight: 300;;
-  }
-
-  p {
-    font-size: 1.09rem;
-    max-width: 500px;
-    line-height: 2rem;
-  }
 
   &-container {
     display: flex;
@@ -19,6 +7,12 @@
     align-items: center;
     max-width: 760px;
     text-align: left;
+    
+    p {
+      font-size: 1.09rem;
+      max-width: 500px;
+      line-height: 2rem;
+    }
   }
 }
 
