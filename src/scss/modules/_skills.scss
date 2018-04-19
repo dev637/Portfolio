@@ -10,14 +10,12 @@
     }
   }
 
-  div {
-    max-width: 780px;
-  }
-
   &-icons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 980px;
   }
 }
 
