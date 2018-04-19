@@ -1,9 +1,15 @@
 .skills {
   background-color: #565A63;
   svg {
-    height: 10rem;
-    width: 10rem;
-    padding: 25px 25px;
+    height: 6rem;
+    width: 6rem;
+    padding: 15px;
+
+    @include atMedium {
+      height: 10rem;
+      width: 10rem;
+      padding: 25px;
+    }
 
     path {
       transition: .5s;
@@ -12,7 +18,7 @@
 
   &-icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 980px;
