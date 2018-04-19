@@ -6,12 +6,17 @@
     padding: 70px 0;
     align-items: center;
     max-width: 760px;
-    text-align: left;
+    flex-direction: column;
     
     p {
       font-size: 1.09rem;
       max-width: 500px;
       line-height: 2rem;
+    }
+
+    @include atMedium {
+      flex-direction: row;
+      text-align: left;
     }
   }
 }
@@ -20,5 +25,8 @@
   border-radius: 200px;
   height: 200px;
   background: lightblue;
-  margin-right: 30px;
+
+  @include atMedium {
+    margin-right: 30px;
+  }
 }
