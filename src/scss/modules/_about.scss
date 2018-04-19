@@ -3,7 +3,7 @@
   &-container {
     display: flex;
     margin: 0 auto;
-    padding: 70px 0;
+    padding: 20px 0;
     align-items: center;
     max-width: 760px;
     flex-direction: column;
@@ -17,6 +17,7 @@
     @include atMedium {
       flex-direction: row;
       text-align: left;
+      padding: 70px 0;
     }
   }
 }
