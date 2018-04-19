@@ -14,16 +14,23 @@ $contact-bg: #373A40;
     text-align: left;
     max-width: 650px;
 
-    div {
+    > div {
       padding-bottom: 1rem;
     }
 
     &-top {
-      display: flex;
-      justify-content: space-between;
-      
-      &-name, &-email {
-        width: 45%;
+      &-name {
+        padding-bottom: 1rem;
+      }
+
+      @include atMedium {
+        display: flex;
+        justify-content: space-between;
+        
+        &-name, &-email {
+          width: 45%;
+          padding-bottom: 0;
+        }
       }
     }
 
