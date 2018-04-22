@@ -44,6 +44,8 @@ nav {
   color: #8B0000;
   font-size: 2.5rem;
   font-weight: 600;
+  padding-top: 13px;
+  transition: .5s;
 }
 
 .dark-nav {
@@ -52,5 +54,9 @@ nav {
   ul {
     background: none;
     margin: 0;
+  }
+
+  .logo {
+    padding-top: 0;
   }
 }
