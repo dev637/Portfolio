@@ -1,19 +1,19 @@
 "use strict";
 
 const nav = document.querySelector('#Navbar');
+const title = document.querySelector('.title').getBoundingClientRect().y*.33;
+
 let topOfNav = nav.offsetTop;
 
 function fixNav() {
-  if(window.scrollY >= topOfNav) {
-    document.body.style.paddingTop = nav.offsetHeight + 'px';
-    document.body.classList.add('fixed-nav');
+  if(window.scrollY >= title) {
+    nav.classList.add('dark-nav');
   } else {
-    document.body.classList.remove('fixed-nav');
-    document.body.style.paddingTop = 0;
+    nav.classList.remove('dark-nav');
   }
 }
 
-// window.addEventListener('scroll', fixNav);
+window.addEventListener('scroll', fixNav);
 
 // Navbar smooth scrolling
 var $root = $('html, body');

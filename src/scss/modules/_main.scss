@@ -6,6 +6,9 @@
   text-align: center;
 
 	.wrapper {
+		transform: translateY(30vh);
+		border: 5px solid white;
+		max-width: 500px;
 		h1 {
 	  	font-size: 5rem;
 	  	font-weight: 100;
