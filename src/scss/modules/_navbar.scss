@@ -6,11 +6,14 @@ nav {
   z-index: 1;
   
   ul {
-    background: rgba(255, 255, 255, .4);
     padding-left: 0;
     list-style: none;
     float: right;
     transition: .5s;
+
+    @include medium-navbar {
+      background: rgba(255, 255, 255, .4);
+    }
   }
 
   li {
@@ -44,7 +47,7 @@ nav {
   color: #8B0000;
   font-size: 2.5rem;
   font-weight: 600;
-  padding-top: 13px;
+  padding-top: 17px;
   transition: .5s;
 }
 
@@ -58,5 +61,33 @@ nav {
 
   .logo {
     padding-top: 0;
+  }
+
+  .navbar_button {
+    top: -4px;
+  }
+}
+
+.navbar_menu {
+
+  a {
+    display: none;
+  }
+  
+  @include medium-navbar {
+    a {
+      display: block;
+    }
+  }
+}
+
+.navbar_button {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  transition: .5s;
+
+  @include medium-navbar {
+    display: none;
   }
 }

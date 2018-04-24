@@ -3,3 +3,9 @@
 		@content;
 	}
 }
+
+@mixin medium-navbar {
+	@media (min-width: 660px) {
+		@content;
+	}
+}

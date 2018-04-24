@@ -55,3 +55,10 @@ $(devicons).hover(
     $(this).addClass("svg-mask");
   },
 );
+
+// Hamburger icon handler
+var hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", function() {
+  hamburger.classList.toggle("is-active");
+});
