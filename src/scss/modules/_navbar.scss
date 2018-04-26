@@ -2,23 +2,47 @@ nav {
   top: 0;
   width: 100%;
   position: fixed;
-  transition: all 0.5s;
   z-index: 1;
-  
+  transition: .5s;
+  height: 46px;
+
+  @include medium-navbar {
+    height: auto;
+  }
+
   ul {
     padding-left: 0;
     list-style: none;
     float: right;
+    text-align: center;
+    width: 50%;
     transition: .5s;
+    margin: 0;
+    position: absolute;
+    left: 25%;
+    transform: translateY(-120%);
+  
+    li {
+      background: rgba(0, 0, 0, 0.7);
+    }
 
     @include medium-navbar {
+      position: relative;
+      left: auto;
       background: rgba(255, 255, 255, .4);
+      width: auto;
+      transform: none;
+      margin: 1rem 0;
+    
+      li {
+        background: none;
+        float: left;
+      }
     }
-  }
-
-  li {
-    float: left;
-    display: block;
+  
+    &.menu-toggle {
+      transform: translateY(0%);
+    }
   }
 
   a {
@@ -52,7 +76,7 @@ nav {
 }
 
 .dark-nav {
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 1);
 
   ul {
     background: none;
@@ -65,19 +89,6 @@ nav {
 
   .navbar_button {
     top: -4px;
-  }
-}
-
-.navbar_menu {
-
-  a {
-    display: none;
-  }
-  
-  @include medium-navbar {
-    a {
-      display: block;
-    }
   }
 }
 

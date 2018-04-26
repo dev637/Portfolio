@@ -17,11 +17,22 @@ window.addEventListener('scroll', fixNav);
 
 // Navbar smooth scrolling
 var $root = $('html, body');
+var mobile_check = window.innerWidth < 660;
+
+window.onresize = function(){
+  mobile_check = window.innerWidth < 660;
+  return mobile_check;
+};
 
 $('a[href^="#"]').click(function () {
     $root.animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 800, 'swing');
+
+    if (mobile_check) {
+      hamburger.classList.toggle("is-active");
+      nav_menu.classList.toggle("menu-toggle");
+    }
     return false;
 });
 
@@ -58,7 +69,9 @@ $(devicons).hover(
 
 // Hamburger icon handler
 var hamburger = document.querySelector(".hamburger");
+var nav_menu = document.querySelector("ul");
 
 hamburger.addEventListener("click", function() {
   hamburger.classList.toggle("is-active");
+  nav_menu.classList.toggle("menu-toggle");
 });
