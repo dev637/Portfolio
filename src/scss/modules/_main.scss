@@ -3,20 +3,62 @@
   height: 100vh;
   background: url(../img/martin-sattler-160751.jpg) bottom center no-repeat;
   background-size: cover;
-  text-align: center;
 
 	.wrapper {
-		transform: translateY(30vh);
-		border: 5px solid white;
-		max-width: 500px;
+		transform: translateY(25vh);
 		h1 {
-	  	font-size: 5rem;
+	  	font-size: 4rem;
 	  	font-weight: 100;
+	  	margin: 0 auto;
+	  	width: 250px;
 	  }
 	
 	  h2 {
-	  	font-size: 2rem;
+	  	font-size: 1.2rem;
 	  	font-weight: 100;
+	  	font-family: Times;
+	  	font-style: italic;
+	  	margin: .5rem auto;
+	  	width: 180px;
+	  }
+
+	  .svg {
+	  	opacity: 1;
+	  	height: 35px;
+	  	filter: drop-shadow(0 0 5px white);
+
+	  	&:hover {
+	  		transform: scale(1.1);
+	  		filter: drop-shadow(0 0 10px white);
+	  	}
+	  }
+
+	  @include atSmall {
+	  	h1 {
+	  		width: 100%;
+	  	}
+
+	  	h2 {
+	  		width: 100%;
+	  	}
+	  }
+
+	  @include medium-navbar {
+	  	h1 {
+	  		font-size: 6rem;
+	  	}
+
+	  	h2 {
+	  		font-size: 2rem;
+	  	}
+
+	  	div {
+	  		padding: 50px;
+	  	}
+
+	  	.svg {
+	  		height: 50px;
+	  	}
 	  }
 	}
 }

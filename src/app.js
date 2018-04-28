@@ -1,7 +1,7 @@
 "use strict";
 
 const nav = document.querySelector('#Navbar');
-const title = document.querySelector('.title').getBoundingClientRect().y*.33;
+const title = document.querySelector('.title').getBoundingClientRect().y*.8;
 
 let topOfNav = nav.offsetTop;
 
