@@ -61,11 +61,11 @@ var devicons = document.querySelectorAll("path");
 $(devicons).hover(
   function(){
     $(this).removeClass("svg-mask");
-    $(this.parentElement).addClass("svg-bg");
+    $(this).closest("div").css("box-shadow", "inset 0 0 20px 15px #565A63");
   },
   function(){
     $(this).addClass("svg-mask");
-    $(this.parentElement).removeClass("svg-bg");
+    $(this).closest("div").css("box-shadow", "inset 0 0 20px 105px #565A63");
   },
 );
 
