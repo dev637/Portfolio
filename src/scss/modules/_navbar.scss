@@ -5,6 +5,7 @@ nav {
   z-index: 1;
   transition: .5s;
   height: 46px;
+  font-family: 'Raleway', sans-serif;
 
   @include medium-navbar {
     height: auto;
@@ -52,7 +53,7 @@ nav {
     color: white;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     transition: all .4s ease-in-out;
     
     &:hover:not(.active) {      
@@ -70,7 +71,7 @@ nav {
   float: left;
   color: #8B0000;
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   padding-top: 17px;
   transition: .5s;
 }
