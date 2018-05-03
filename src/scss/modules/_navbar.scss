@@ -4,45 +4,47 @@ nav {
   position: fixed;
   z-index: 1;
   transition: .5s;
-  height: 46px;
+  height: 48px;
   font-family: 'Raleway', sans-serif;
+  background: black;
 
   @include medium-navbar {
-    height: auto;
+    background: none;
   }
 
   ul {
     padding-left: 0;
     list-style: none;
-    float: right;
     text-align: center;
-    width: 50%;
     transition: .5s;
-    margin: 0;
-    position: absolute;
-    left: 25%;
-    transform: translateY(-120%);
-  
+    max-height: 0px;
+    overflow: hidden;
+    clear: both;
+
     li {
       background: rgba(0, 0, 0, 0.7);
     }
 
     @include medium-navbar {
       position: relative;
+      float: right;
       left: auto;
       background: rgba(255, 255, 255, .4);
       width: auto;
       transform: none;
       margin: 1rem 0;
+      max-height: 48px;
+      overflow: visible;
+      clear: none;
     
       li {
         background: none;
         float: left;
       }
     }
-  
+
     &.menu-toggle {
-      transform: translateY(0%);
+      max-height: 15rem;
     }
   }
 
@@ -72,16 +74,22 @@ nav {
   color: #8B0000;
   font-size: 2.5rem;
   font-weight: 700;
-  padding-top: 17px;
   transition: .5s;
+
+  @include medium-navbar {
+    padding-top: 17px;
+  }
 }
 
 .dark-nav {
-  background: rgba(0, 0, 0, 1);
+  background: black;
 
   ul {
     background: none;
-    margin: 0;
+
+    @include medium-navbar {
+      margin: 0;
+    }
   }
 
   .logo {
@@ -89,17 +97,17 @@ nav {
   }
 
   .navbar_button {
-    top: -4px;
   }
 }
 
 .navbar_button {
   position: absolute;
-  top: 12px;
   right: 14px;
   transition: .5s;
+  top: -4px;
 
   @include medium-navbar {
+    top: 12px;
     display: none;
   }
 }
