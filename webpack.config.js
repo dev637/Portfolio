@@ -47,5 +47,5 @@ module.exports = {
         hot: true,
         compress: true,
         watchContentBase: true,
-    },
+    }
 };
