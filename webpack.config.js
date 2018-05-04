@@ -26,8 +26,10 @@ module.exports = {
                 use: {
                     loader: 'html-loader'
                 }
+            }, {
+                test: /\.svg$/,
+                loader: 'svg-loader' // 👈 Add loader
             }
-
         ]
     },
     plugins: [
