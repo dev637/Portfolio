@@ -1,8 +1,32 @@
 .main {
   color: white;
   height: 100vh;
-  background: url(../img/martin-sattler-160751.jpg) bottom center no-repeat;
-  background-size: cover;
+  background: black;
+  
+	@include atXsmall {
+  	background: url(../img/martin-sattler-160751-460w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atSmall {
+  	background: url(../img/martin-sattler-160751-770w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atMedium {
+  	background: url(../img/martin-sattler-160751-1025w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atLarge {
+  	background: url(../img/martin-sattler-160751-1920w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atXlarge {
+  	background: url(../img/martin-sattler-160751.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
 
 	.wrapper {
 		transform: translateY(25vh);
