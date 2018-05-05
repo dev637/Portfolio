@@ -33,7 +33,6 @@
 .svg-con {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
   box-shadow: inset 0 0 20px 105px #565A63;
   display: flex;
   justify-content: center;
@@ -42,7 +41,7 @@
   background: white;
 
   @include atMedium {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
     }
 }
