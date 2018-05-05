@@ -1,7 +1,8 @@
 @import "../../node_modules/normalize.css";
 @import "base/_global";
+@import "base/_mixins";
 @import "modules/_contact";
-@import "modules/_description";
+@import "modules/_about";
 @import "modules/_footer";
 @import "modules/_main";
 @import "modules/_navbar";
@@ -9,3 +10,4 @@
 @import "modules/_projects";
 @import "modules/_skills";
 @import "modules/_wrapper";
+@import "modules/_hamburger";

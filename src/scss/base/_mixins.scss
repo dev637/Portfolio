@@ -1,0 +1,35 @@
+@mixin atXsmall {
+	@media (max-width: 459px) {
+		@content;
+	}
+}
+
+@mixin atSmall {
+	@media (min-width: 460px) {
+		@content;
+	}
+}
+
+@mixin atMedium {
+	@media (min-width: 770px) {
+		@content;
+	}
+}
+
+@mixin medium-navbar {
+	@media (min-width: 660px) {
+		@content;
+	}
+}
+
+@mixin atLarge {
+	@media (min-width: 1025px) {
+		@content;
+	}
+}
+
+@mixin atXlarge {
+	@media (min-width: 1920px) {
+		@content;
+	}
+}

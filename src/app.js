@@ -1,15 +1,15 @@
 "use strict";
 
 const nav = document.querySelector('#Navbar');
+const title = document.querySelector('.title').getBoundingClientRect().y*.8;
+
 let topOfNav = nav.offsetTop;
 
 function fixNav() {
-  if(window.scrollY >= topOfNav) {
-    document.body.style.paddingTop = nav.offsetHeight + 'px';
-    document.body.classList.add('fixed-nav');
+  if(window.scrollY >= title) {
+    nav.classList.add('dark-nav');
   } else {
-    document.body.classList.remove('fixed-nav');
-    document.body.style.paddingTop = 0;
+    nav.classList.remove('dark-nav');
   }
 }
 
@@ -17,11 +17,22 @@ window.addEventListener('scroll', fixNav);
 
 // Navbar smooth scrolling
 var $root = $('html, body');
+var mobile_check = window.innerWidth < 660;
+
+window.onresize = function(){
+  mobile_check = window.innerWidth < 660;
+  return mobile_check;
+};
 
 $('a[href^="#"]').click(function () {
     $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top - nav.offsetHeight + 1
+        scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 800, 'swing');
+
+    if (mobile_check) {
+      hamburger.classList.toggle("is-active");
+      nav_menu.classList.toggle("menu-toggle");
+    }
     return false;
 });
 
@@ -46,12 +57,23 @@ window.onscroll = function() {
 
 // Hover icon color
 
-var devicons = document.querySelectorAll("[class^=devicon]");
+var devicons = document.querySelectorAll("path");
 $(devicons).hover(
   function(){
-    $(this).addClass("colored");
+    $(this).removeClass("svg-mask");
+    $(this).closest("div").css("box-shadow", "inset 0 0 20px 15px #565A63");
   },
   function(){
-    $(this).removeClass("colored");
-  }
+    $(this).addClass("svg-mask");
+    $(this).closest("div").css("box-shadow", "inset 0 0 20px 105px #565A63");
+  },
 );
+
+// Hamburger icon handler
+var hamburger = document.querySelector(".hamburger");
+var nav_menu = document.querySelector("ul");
+
+hamburger.addEventListener("click", function() {
+  hamburger.classList.toggle("is-active");
+  nav_menu.classList.toggle("menu-toggle");
+});

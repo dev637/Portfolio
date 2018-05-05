@@ -6,6 +6,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
     entry: {
         global: './src/script.js',
+        vendor: './src/vendor.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -23,13 +24,12 @@ module.exports = {
             }, {
                 test: /\.(html)$/,
                 use: {
-                    loader: 'html-loader',
-                    options: {
-                        attrs: [':data-src']
-                    }
+                    loader: 'html-loader'
                 }
+            }, {
+                test: /\.svg$/,
+                loader: 'svg-loader' // 👈 Add loader
             }
-
         ]
     },
     plugins: [
@@ -49,5 +49,5 @@ module.exports = {
         hot: true,
         compress: true,
         watchContentBase: true,
-    },
+    }
 };

@@ -1,19 +1,86 @@
 .main {
   color: white;
-  height: calc(100vh - 58px);
-  background: url(../img/martin-sattler-160751.jpg) bottom center no-repeat;
-  background-size: cover;
-  text-align: center;
+  height: 100vh;
+  background: black;
+  
+	@include atXsmall {
+  	background: url(../img/martin-sattler-160751-460w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atSmall {
+  	background: url(../img/martin-sattler-160751-770w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atMedium {
+  	background: url(../img/martin-sattler-160751-1025w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atLarge {
+  	background: url(../img/martin-sattler-160751-1920w.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
+
+	@include atXlarge {
+  	background: url(../img/martin-sattler-160751.jpg) bottom center no-repeat;
+  	background-size: cover;
+	}
 
 	.wrapper {
+		transform: translateY(25vh);
 		h1 {
-	  	font-size: 5rem;
-	  	font-weight: 100;
+	  	font-size: 4rem;
+	  	font-weight: 700;
+	  	margin: 0 auto;
+	  	width: 250px;
 	  }
 	
 	  h2 {
-	  	font-size: 2rem;
+	  	font-size: 1.2rem;
 	  	font-weight: 100;
+	  	margin: .5rem auto;
+	  	width: 180px;
+	  }
+
+	  .svg {
+	  	opacity: 1;
+	  	height: 35px;
+	  	filter: drop-shadow(0 0 5px white);
+
+	  	&:hover {
+	  		transform: scale(1.1);
+	  		filter: drop-shadow(0 0 10px white);
+	  	}
+	  }
+
+	  @include atSmall {
+	  	h1 {
+	  		width: 100%;
+	  	}
+
+	  	h2 {
+	  		width: 100%;
+	  	}
+	  }
+
+	  @include medium-navbar {
+	  	h1 {
+	  		font-size: 6rem;
+	  	}
+
+	  	h2 {
+	  		font-size: 2rem;
+	  	}
+
+	  	div {
+	  		padding: 50px;
+	  	}
+
+	  	.svg {
+	  		height: 50px;
+	  	}
 	  }
 	}
 }

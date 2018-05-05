@@ -1,68 +1,78 @@
+$contact-bg: #373A40;
+
 .contact {
   color: white;
-  background-color: #6D6F72;
-  text-align: center;
-
-  h2 {
-    font-size: 2.5rem;
-    font-weight: 300;;
-  }
+  background: $contact-bg;
 
 	&-row {
-  	display: flex;
-  	justify-content: center;
-  	max-width: 1000px;
-  	margin: 3rem auto 5rem;
-	}
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+  }
 
-	&-form {
-  	text-align: left;
-    width: 500px;
+  &-form {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 650px;
 
-    div {
-      border-top: 1px solid white;
-      padding: 1.2rem 0;
-      display: flex;
+    > div {
+      padding-bottom: 1rem;
     }
 
-  	input {
-  		padding: .2rem 1rem;
-  		background: transparent;
-      border: 0;
-      border-left: solid 1px white;
-      color: white;
-      flex: 1px;
+    &-top {
+      &-name {
+        padding-bottom: 1rem;
+      }
+
+      @include atMedium {
+        display: flex;
+        justify-content: space-between;
+        
+        &-name, &-email {
+          width: 45%;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    input, textarea {
+      font-size: 1.3rem;
+      width: 100%;
+      padding: .4rem;
+      margin-top: .3rem;
+      border: $contact-bg;
+      background: lighten($contact-bg, 10%);
+      transition: background 0.3s ease-in-out;
+      
+      &:focus {
+        background: white;
+        outline: none;
+      }
   	}
 
-  	input[type="submit"] {
-      border: 0;
-      padding: 0;
-      font-size: 1.3rem;
-  		text-align: left;
-      flex: 0;
+    ::placeholder {
+      color: darken(white, 30%);
+    }
 
-  		&:hover {
-  			cursor: pointer;
+  	input[type="submit"] {
+      color: white;
+      background: darken($contact-bg, 10%);
+      width: auto;
+      font-size: 1.3rem;
+      padding: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        background: black;
   		}
   	}
 
   	textarea {
-  		padding: 0 1rem;
-  		border: 0;
   		resize: none;
-      color: white;
-      border-left: 1px solid white;
-      background-color: transparent;
-      flex: 1px;
   	}
 
   	label {
-			font-size: 1.3rem;
-  		padding-right: 1rem;
+      font-size: 1.1rem;
+  		padding-bottom: 2rem;
   	}
-
-    label[for="message"] {
-      vertical-align: top;
-    }
 	}
 }
