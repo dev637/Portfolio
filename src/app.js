@@ -55,20 +55,6 @@ window.onscroll = function() {
   }
 }
 
-// Hover icon color
-
-var devicons = document.querySelectorAll("path");
-$(devicons).hover(
-  function(){
-    $(this).removeClass("svg-mask");
-    $(this).closest("div").css("box-shadow", "inset 0 0 20px 15px #565A63");
-  },
-  function(){
-    $(this).addClass("svg-mask");
-    $(this).closest("div").css("box-shadow", "inset 0 0 20px 105px #565A63");
-  },
-);
-
 // Hamburger icon handler
 var hamburger = document.querySelector(".hamburger");
 var nav_menu = document.querySelector("ul");

@@ -15,12 +15,12 @@ $contact-bg: #373A40;
     max-width: 650px;
 
     > div {
-      padding-bottom: 1rem;
+      padding-bottom: 2rem;
     }
 
     &-top {
       &-name {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
       }
 
       @include atMedium {
@@ -38,10 +38,10 @@ $contact-bg: #373A40;
       font-size: 1.3rem;
       width: 100%;
       padding: .4rem;
-      margin-top: .3rem;
+      margin-top: 1rem;
       border: $contact-bg;
       background: lighten($contact-bg, 10%);
-      transition: background 0.3s ease-in-out;
+      transition: background 0.2s ease-in-out;
       
       &:focus {
         background: white;
@@ -62,8 +62,13 @@ $contact-bg: #373A40;
 
       &:hover {
         cursor: pointer;
-        background: black;
-  		}
+        background: $accent-color;
+      }
+
+      &:focus {
+        background: $accent-color;
+        
+      }
   	}
 
   	textarea {
@@ -73,6 +78,7 @@ $contact-bg: #373A40;
   	label {
       font-size: 1.1rem;
   		padding-bottom: 2rem;
+      margin-top: 45px;
   	}
 	}
 }
