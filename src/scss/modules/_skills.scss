@@ -5,15 +5,15 @@
     width: 6rem;
     padding: 15px;
     transition: .5s;
+    
+    path, g {
+      fill: white;
+    }
 
     @include atMedium {
       height: 10rem;
       width: 10rem;
       padding: 25px;
-    }
-
-    path {
-      transition: .5s;
     }
   }
 
@@ -22,26 +22,8 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 800px;
   }
 }
 
-.svg-mask {
-  fill: white;
-}
 
-.svg-con {
-  width: 140px;
-  height: 140px;
-  box-shadow: inset 0 0 20px 105px #565A63;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .5s;
-  background: white;
-
-  @include atMedium {
-      width: 180px;
-      height: 180px;
-    }
-}
