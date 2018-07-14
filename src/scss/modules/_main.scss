@@ -44,17 +44,15 @@
 	  	width: 180px;
 	  }
 
-	  .svg {
-	  	opacity: 1;
-	  	height: 35px;
-	  	filter: invert(100%);
-	  	// filter: drop-shadow(0 0 5px white);
+    svg {
+      fill: white;
+      border: 1px solid white;
 
-	  	&:hover {
-	  		transform: scale(1.1);
-	  		// filter: drop-shadow(0 0 10px white);
-	  	}
-	  }
+      &:hover {
+        fill: black;
+        background: white;
+      }     
+    }
 
 	  @include atSmall {
 	  	h1 {
@@ -71,10 +69,6 @@
 	  @include medium-navbar {
 	  	div {
 	  		padding: 50px;
-	  	}
-
-	  	.svg {
-	  		height: 50px;
 	  	}
 	  }
 

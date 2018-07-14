@@ -65,7 +65,7 @@ hamburger.addEventListener("click", function() {
 });
 
 // Inline skill svgs from img tags
-$('.skill_svg').each((i, e) => {
+$('img.svg').each((i, e) => {
 
   const $img = $(e);
   const imgID = $img.attr('id');
