@@ -55,19 +55,15 @@ $contact-bg: #373A40;
 
   	input[type="submit"] {
       color: white;
-      background: darken($contact-bg, 10%);
+      background: $contact-bg;
       width: auto;
       font-size: 1.3rem;
       padding: 1rem;
+      border: 1px solid white;
 
-      &:hover {
+      &:hover, &:focus {
         cursor: pointer;
         background: $accent-color;
-      }
-
-      &:focus {
-        background: $accent-color;
-        
       }
   	}
 
