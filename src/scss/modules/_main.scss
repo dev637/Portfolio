@@ -31,17 +31,15 @@
 	.wrapper {
 		transform: translateY(25vh);
 		h1 {
-	  	font-size: 4rem;
+	  	font-size: 17vw;
 	  	font-weight: 700;
 	  	margin: 0 auto;
-	  	width: 250px;
 	  }
 	
 	  h2 {
-	  	font-size: 20px;
+	  	font-size: 4vw;
 	  	font-weight: 100;
 	  	margin: .5rem auto;
-	  	width: 180px;
 	  }
 
     svg {
@@ -57,12 +55,12 @@
 	  @include atSmall {
 	  	h1 {
 	  		width: 100%;
-	  		font-size: calc(64px + 76 * ((100vw - 460px) / 1460));
+	  		font-size: calc(78px + 76 * ((100vw - 460px) / 1460));
 	  	}
 
 	  	h2 {
 	  		width: 100%;
-	  		font-size: calc(20px + 20 * ((100vw - 460px) / 1460));
+	  		font-size: calc(18px + 20 * ((100vw - 460px) / 1460));
 	  	}
 	  }
 
