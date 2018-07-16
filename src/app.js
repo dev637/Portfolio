@@ -13,7 +13,10 @@ function fixNav() {
   }
 }
 
+window.onload = fixNav()
 window.addEventListener('scroll', fixNav);
+window.addEventListener('resize', fixNav);
+
 
 // Navbar smooth scrolling
 var $root = $('html, body');
