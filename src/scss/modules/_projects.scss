@@ -17,6 +17,10 @@
     align-items: center;
     padding-bottom: 10rem;
 
+    &:last-child {
+      padding-bottom: 37px;
+    }
+
     > div {
       width: 100%;
       p {
