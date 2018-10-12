@@ -7,6 +7,14 @@ nav {
   height: 48px;
   font-family: 'Raleway', sans-serif;
   background: black;
+  
+  .wrapper {
+    padding: 0;
+
+    @include medium-navbar {
+      padding: 0 1.5rem;
+    }
+  }
 
   @include medium-navbar {
     background: none;
@@ -20,12 +28,17 @@ nav {
     max-height: 0px;
     overflow: hidden;
     clear: both;
+    
+    position: absolute;
+    width: 100%;
+    top: 30px;
 
     li {
       background: rgba(0, 0, 0, 0.7);
     }
 
     @include medium-navbar {
+      top: 0;
       position: relative;
       float: right;
       left: auto;
@@ -74,8 +87,12 @@ nav {
   font-size: 2.5rem;
   font-weight: 700;
   transition: .2s;
+  position: absolute;
+  left: 24px;
 
   @include medium-navbar {
+    left: 0;
+    position: relative;
     padding-top: 17px;
   }
 }

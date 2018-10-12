@@ -5,16 +5,17 @@
   margin: 0px;
   padding-bottom: 1rem;
   text-align: center;
-}
 
-.svg {
-  height: 50px;
-  margin: 33px 10px 13px;
-  border-radius: 50%;
-  opacity: .3;
-  transition: .5s;
+  svg {
+    fill: white;
+    opacity: .3;
 
-  &:hover {
-    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }     
+  }
+
+  p {
+    margin-top: 0;
   }
 }

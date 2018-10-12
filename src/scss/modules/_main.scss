@@ -31,50 +31,42 @@
 	.wrapper {
 		transform: translateY(25vh);
 		h1 {
-	  	font-size: 4rem;
+	  	font-size: 17vw;
 	  	font-weight: 700;
 	  	margin: 0 auto;
-	  	width: 250px;
 	  }
 	
 	  h2 {
-	  	font-size: 20px;
+	  	font-size: 4vw;
 	  	font-weight: 100;
 	  	margin: .5rem auto;
-	  	width: 180px;
 	  }
 
-	  .svg {
-	  	opacity: 1;
-	  	height: 35px;
-	  	filter: invert(100%);
-	  	// filter: drop-shadow(0 0 5px white);
+    svg {
+      fill: white;
+      border: 1px solid white;
 
-	  	&:hover {
-	  		transform: scale(1.1);
-	  		// filter: drop-shadow(0 0 10px white);
-	  	}
-	  }
+      &:hover {
+        fill: black;
+        background: white;
+      }     
+    }
 
 	  @include atSmall {
 	  	h1 {
 	  		width: 100%;
-	  		font-size: calc(64px + 76 * ((100vw - 460px) / 1460));
+	  		font-size: calc(78px + 76 * ((100vw - 460px) / 1460));
 	  	}
 
 	  	h2 {
 	  		width: 100%;
-	  		font-size: calc(20px + 20 * ((100vw - 460px) / 1460));
+	  		font-size: calc(18px + 20 * ((100vw - 460px) / 1460));
 	  	}
 	  }
 
 	  @include medium-navbar {
 	  	div {
 	  		padding: 50px;
-	  	}
-
-	  	.svg {
-	  		height: 50px;
 	  	}
 	  }
 

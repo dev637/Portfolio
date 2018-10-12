@@ -1,0 +1,15 @@
+.social-media {
+  display: flex;
+  justify-content: center;
+
+  a {
+    margin: 2rem;
+  }
+
+  svg {
+    padding: .5rem;
+    height: 3rem;
+    width: 3rem;
+    transition: all .5s;
+  }
+}
