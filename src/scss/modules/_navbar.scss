@@ -42,7 +42,7 @@ nav {
       position: relative;
       float: right;
       left: auto;
-      background: rgba(255, 255, 255, .4);
+      background: rgba(255, 255, 255, 0.4);
       width: auto;
       transform: none;
       margin: 1rem 0;
@@ -72,6 +72,7 @@ nav {
     
     &:hover:not(.active) {      
       color: $accent-color;
+      background: rgba(255, 255, 255, 0.7);
     }
   }
 }
