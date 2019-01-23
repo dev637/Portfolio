@@ -1,9 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: {
         global: './src/script.js',
         vendor: './src/vendor.js'
@@ -16,11 +17,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: ["css-loader?url=false", "sass-loader"]
-                })),
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                  "style-loader",
+                  MiniCssExtractPlugin.loader,
+                  "css-loader",
+                  "postcss-loader",
+                  "sass-loader",
+                ],
             }, {
                 test: /\.(html)$/,
                 use: {
@@ -33,7 +37,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("style.css"),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "style.css",
+            // chunkFilename: "[id].css"
+          }),
         new BrowserSyncPlugin({
             // browse to http://localhost:3000/ during development, 
             // ./public directory is being served 
