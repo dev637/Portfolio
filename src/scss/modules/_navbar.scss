@@ -96,7 +96,7 @@ nav {
     position: relative;
     text-decoration: none;
     padding: 15px;
-    display: inline-block;
+    display: block;
     color: white;
     letter-spacing: 2px;
     font-weight: 700;
@@ -152,6 +152,10 @@ nav {
   right: 14px;
   transition: .2s;
   top: -4px;
+
+  button {
+    outline: none;
+  }
 
   @include medium-navbar {
     top: 12px;
