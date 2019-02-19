@@ -1,13 +1,19 @@
 .skills {
-  background-color: #EAEAEA;
+  background-image: linear-gradient(
+    white 0%,
+    #EAEAEA 10%,
+    #EAEAEA 90%,
+    white 100%
+  );
   svg {
     height: 6rem;
     width: 6rem;
     padding: 15px;
-    transition: .5s;
-    
-    path, g {
-      fill: #00274F;
+    transition: 0.5s;
+
+    path,
+    g {
+      fill: #00274f;
     }
 
     @include atMedium {
@@ -25,5 +31,3 @@
     max-width: 800px;
   }
 }
-
-
