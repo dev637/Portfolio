@@ -6,7 +6,6 @@ nav {
   transition: .2s;
   height: 48px;
   font-family: 'Raleway', sans-serif;
-  background: #2E2E2E;
   
   .wrapper {
     padding: 0;
@@ -44,7 +43,8 @@ nav {
         height: 100%;
         left: 0;
         bottom: 0;
-        background: $accent-color;
+        background: $secondary-dark;
+        // background: linear-gradient(to bottom, $secondary-light, $secondary-dark);
         transition: all .4s ease;
         z-index: -1;
       }
@@ -106,13 +106,14 @@ nav {
 }
 
 .active {
-  background-color: $accent-color;
+  background: $secondary-dark;
+  // background: linear-gradient(to bottom, $secondary-light, $secondary-dark);
 }
 
 .logo {
   display: block;
   float: left;
-  color: $accent-color;
+  color: $secondary-dark;
   color: white;
   font-size: 2.5rem;
   font-weight: 700;
@@ -120,7 +121,7 @@ nav {
   position: absolute;
   margin: 0;
   padding: 0 5px;
-  background: $accent-color;
+  background: $secondary-dark;
 
   @include medium-navbar {
     left: 0;
@@ -130,7 +131,7 @@ nav {
 }
 
 .dark-nav {
-  background: #202124;
+  background: #00274F;
 
   ul {
     background: none;

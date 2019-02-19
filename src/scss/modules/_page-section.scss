@@ -16,9 +16,9 @@
 				top: 150%;
 				left: 50%;
 				transform: translate(-50%,-50%);
-    		height: 1px;
+    		height: 3px;
     		width: 250px;
-    		background: lighten(black, 10%);
+    		background: #FF4500;
 			}
 		}
 
@@ -39,7 +39,7 @@
    			color: white;
 
    			&::after {
-     			background: white;
+     			background: #FF4500;
    			}
  			}
 

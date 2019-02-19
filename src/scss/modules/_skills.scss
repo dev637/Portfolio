@@ -1,5 +1,5 @@
 .skills {
-  background-color: #565A63;
+  background-color: #EAEAEA;
   svg {
     height: 6rem;
     width: 6rem;
@@ -7,7 +7,7 @@
     transition: .5s;
     
     path, g {
-      fill: white;
+      fill: #00274F;
     }
 
     @include atMedium {

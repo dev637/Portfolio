@@ -80,7 +80,7 @@
     
     li {
       color: white;
-      background: #474A52;
+      background: #00274F;
       border-radius: 1rem;
       padding: .2rem .7rem;
       margin: .25rem .3rem;
@@ -101,13 +101,13 @@
       text-decoration: none;
       padding: .3rem 1rem;
       margin: 0 1rem;
-      border: 3px solid $accent-color;
-      color: $accent-color;
-      box-shadow: inset 0 0 0 0 $accent-color;
+      border: 3px solid $secondary-dark;
+      color: $secondary-dark;
+      box-shadow: inset 0 0 0 0 $secondary-dark;
       transition: all .5s;
       
       &:hover {
-        box-shadow: inset 0 0 0 2rem $accent-color;
+        box-shadow: inset 0 0 0 2rem $secondary-dark;
         color: white;
         font-weight: bolder;
       }
