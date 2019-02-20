@@ -4,7 +4,7 @@
     font-size: 2.2rem;
     margin: 0;
     font-weight: 400;
-    padding-top: 1rem;
+    padding-top: 3rem;
 
     @include atMedium {
       padding-top: 0;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10rem;
+    padding: 4rem 0;
 
     img {
       box-shadow: 0 0 5rem #b3b3b3;
@@ -83,7 +83,8 @@
       background: #00274F;
       border-radius: 1rem;
       padding: .2rem .7rem;
-      margin: .25rem .3rem;
+      margin: .45rem .5rem;
+      box-shadow: 3px 3px $secondary-dark;
     }
 
     @include atMedium {
