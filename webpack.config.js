@@ -3,8 +3,10 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+const mode = process.env.PRODUCTION_MODE || 'development';
+
 module.exports = {
-    mode: 'production',
+    mode: mode,
     entry: {
         global: './src/script.js',
         vendor: './src/vendor.js'
@@ -53,7 +55,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin()
     ],
-    devtool: 'cheap-eval-source-map',
+    devtool: (mode === 'development') ? 'inline-source-map' : '',
     devServer: {
         hot: true,
         compress: true,
