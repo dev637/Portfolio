@@ -2,7 +2,6 @@
 	position: relative;
   color: white;
   height: 100vh;
-	background: linear-gradient( #182848,#4b6cb7);
 
 	#skyline {
     position: absolute;
@@ -12,7 +11,7 @@
 		z-index: 2;
 	}
 
-	.stars, .twinkling {
+	.stars, .twinkling, .sky {
 		position:absolute;
 		top:0;
 		left:0;
@@ -22,6 +21,11 @@
 		height:100%;
 		display:block;
 	}
+
+  .sky {
+    background: linear-gradient( #1828486b,#4b6bb7);
+    z-index: 2;
+  }
 
 	@keyframes move-twink-back {
 		from {background-position:0 0;}
