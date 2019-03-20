@@ -46,21 +46,21 @@ $contact-bg: #f1f1f1;
     }
 
   	input[type="submit"] {
-      color: $secondary-dark;
+      color: $firstcol;
       background: $contact-bg;
       font-weight: bolder;
       text-transform: uppercase;
       width: auto;
       font-size: 1.3rem;
       padding: 1rem;
-      border: 3px solid $secondary-dark;
-      box-shadow: inset 0 0 $secondary-dark;
-      transition: all 0.5s;
+      border: 3px solid $firstcol;
+      box-shadow: inset 0 0 $firstcol;
+      transition: all 0.3s ease-out;
       
       &:hover, &:focus {
         cursor: pointer;
         color: white;
-        box-shadow: inset 5em 0 $secondary-dark;
+        box-shadow: inset 5em 0 $firstcol;
       }
   	}
 
@@ -71,7 +71,6 @@ $contact-bg: #f1f1f1;
   	label {
       font-size: 1.1rem;
       font-weight: bolder;
-      color: $primary-dark;
   	}
 	}
 }

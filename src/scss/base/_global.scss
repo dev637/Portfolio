@@ -17,12 +17,11 @@ h1, h2, h3 {
 	font-weight: 400;
 }
 
-$primary-dark: #00274F;
-$primary-light: #8B9CAF;
-$secondary-dark: #FF4500;
-$secondary-light: #FFAA8B;
+$firstcol: #54008b;
+$secondcol: #00274F;
+$thirdcol: #FF4500;
 
 ::selection{
-background: $secondary-dark;
+background: $thirdcol;
 color: white;
 }

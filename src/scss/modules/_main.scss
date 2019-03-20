@@ -24,8 +24,9 @@
 	}
 
   .sky {
-    background: linear-gradient( #1828486b,#4b6bb7);
+    background: linear-gradient(#03001e, #7303c0, #ff41cc);
     z-index: 2;
+    opacity: 0.5;
   }
 
 	@keyframes move-twink-back {
@@ -82,8 +83,8 @@
       border: 1px solid white;
 
       &:hover {
-        border-color: $secondary-dark;
-        background: $secondary-dark;
+        border-color: $thirdcol;
+        background: $thirdcol;
       }
     }
 

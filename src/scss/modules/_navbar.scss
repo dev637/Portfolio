@@ -15,10 +15,6 @@ nav {
     }
   }
 
-  @include medium-navbar {
-    background: none;
-  }
-
   ul {
     padding-left: 0;
     list-style: none;
@@ -57,7 +53,7 @@ nav {
         &:after {
           content: '';
           position: absolute;
-          bottom: 5px;
+          bottom: 8px;
           width: 0px;
           height: 3px;
           transition: all 0.2s ease-in-out;
@@ -67,12 +63,12 @@ nav {
 
         &:before {
           left: calc(50%);
-          background: $secondary-dark;
+          background: $thirdcol;
         }
 
         &:after {
           right: calc(50%);
-          background: $secondary-dark;
+          background: $thirdcol;
         }
 
         &:hover {
@@ -104,21 +100,25 @@ nav {
 }
 
 .active {
-  color: $secondary-dark;
+  color: $thirdcol;
+
+  &:before,
+  &:after {
+    width: 40%;
+    opacity: 1;
+  }
 }
 
 .logo {
   display: block;
   float: left;
-  color: $secondary-dark;
-  color: white;
+  color: $thirdcol;
   font-size: 2.5rem;
   font-weight: 700;
   transition: 0.2s;
   position: absolute;
   margin: 0;
   padding: 0 5px;
-  background: $secondary-dark;
 
   @include medium-navbar {
     left: 0;
@@ -128,10 +128,9 @@ nav {
 }
 
 .dark-nav {
-  background: #00274f;
+  background: linear-gradient(to left, $firstcol, $secondcol);
 
   ul {
-    background: none;
 
     @include medium-navbar {
       margin: 0;

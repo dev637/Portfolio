@@ -18,7 +18,7 @@
 				transform: translate(-50%,-50%);
     		height: 3px;
     		width: 250px;
-    		background: #FF4500;
+    		background: $thirdcol;
 			}
 		}
 
@@ -39,7 +39,7 @@
    			color: white;
 
    			&::after {
-     			background: #FF4500;
+     			background: $thirdcol;
    			}
  			}
 
