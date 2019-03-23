@@ -6,7 +6,8 @@ require('./app.js');
 
 AOS.init({
 	once: 'false',
-	anchorPlacement: 'bottom-top'
+	duration: 200,
+	anchorPlacement: 'top-top'
 });
 console.log('foo');
 
