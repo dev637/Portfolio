@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   color: #333333;
 }
 
@@ -17,9 +17,11 @@ h1, h2, h3 {
 	font-weight: 400;
 }
 
-$accent-color: #7d251c;
+$firstcol: #54008b;
+$secondcol: #00274F;
+$thirdcol: #FF4500;
 
 ::selection{
-background: $accent-color;
+background: $thirdcol;
 color: white;
 }

@@ -1,10 +1,13 @@
 .projects {
+  position: relative;
+  z-index: 3;
+  background: white;
   
   h3 {
     font-size: 2.2rem;
     margin: 0;
     font-weight: 400;
-    padding-top: 1rem;
+    padding-top: 3rem;
 
     @include atMedium {
       padding-top: 0;
@@ -15,10 +18,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10rem;
+    padding: 4rem 0;
 
     img {
-      border: 1px solid black;
+      box-shadow: 0 0 5rem #b3b3b3;
     }
 
     &:last-child {
@@ -26,7 +29,6 @@
     }
 
     > div {
-      width: 100%;
       p {
         text-align: left;
         margin: 0 auto;
@@ -76,46 +78,65 @@
     padding-bottom: 1.3rem;
     margin: 0 auto;
     list-style: none;
-    font-size: .8rem;
+    font-size: .9rem;
     max-width: 430px;
     
     li {
       color: white;
-      background: #474A52;
+      background: $secondcol;
       border-radius: 1rem;
       padding: .2rem .7rem;
-      margin: .25rem .3rem;
+      margin: .45rem .5rem;
+      box-shadow: 3px 3px $thirdcol;
     }
 
     @include atMedium {
       padding-bottom: 1.8rem;
       justify-content: left;
       max-width: 100%;
+
+      li {
+        margin: .45rem 1rem .45rem 0;
+      }
     }
   }
 
   &-links {
-    
+    display: flex;
+    justify-content: center;
     
     a {
-      font-size: 1.5rem;
       text-decoration: none;
-      padding: .3rem 1rem;
-      margin: 0 1rem;
-      border: 3px solid $accent-color;
-      color: $accent-color;
-      box-shadow: inset 0 0 0 0 $accent-color;
-      transition: all .5s;
       
-      &:hover {
-        box-shadow: inset 0 0 0 2rem $accent-color;
-        color: white;
+      div {
+        position: relative;
+        overflow: hidden;
+        font-size: 1.5rem;
         font-weight: bolder;
-      }
-    }
+        text-transform: uppercase;
+        padding: 0.28rem 1rem;
+        margin: 0 1rem;
+        border: 3px solid darken($firstcol, 10%);
+        color: white;
+        background: $firstcol;
+        transition: all .5s;
+        
+        &:after {
+          position: absolute;
+          content: '';
+          top: -20px;
+          left: -100px;
+          height: 5rem;
+          transform: rotate(45deg);
+          box-shadow: 0 0 10px 15px white;
+          opacity: 0.4;
+          transition: all .5s;
+        }
 
-    @include atMedium {
-      text-align: left;
+        &:hover:after {
+          left: 150px;
+        }
+      }      
     }
   }
 }

@@ -1,5 +1,5 @@
 .page-section {
-	padding: 4rem 0;
+	padding: 6rem 0;
 	text-align: center;
 
 	&_banner {
@@ -16,9 +16,9 @@
 				top: 150%;
 				left: 50%;
 				transform: translate(-50%,-50%);
-    		height: 1px;
+    		height: 3px;
     		width: 250px;
-    		background: lighten(black, 10%);
+    		background: $thirdcol;
 			}
 		}
 
@@ -30,7 +30,7 @@
 			padding: 1rem 0 2rem;
 
 			@include atMedium {
-				padding-bottom: 5rem;
+				padding-bottom: 6rem;
 			}
 		}
 
@@ -39,7 +39,7 @@
    			color: white;
 
    			&::after {
-     			background: white;
+     			background: $thirdcol;
    			}
  			}
 

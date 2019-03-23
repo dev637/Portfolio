@@ -5,45 +5,38 @@
   <meta name="Description" content="Devang Patel's web development portfolio" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Custom CSS -->
-  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="dist/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="/dist/vendor.bundle.js"></script>
 
   <meta charset="utf-8">
 </head>
   <body>
     <div class="main page-section" id="Home">
-      <img
-        srcset="
-          https://res.cloudinary.com/dbeqp2lyo/image/upload/v1546030954/Portfolio/brxxto-346280-unsplash-460w.jpg 460w,
-          https://res.cloudinary.com/dbeqp2lyo/image/upload/v1546030955/Portfolio/brxxto-346280-unsplash-770w.jpg 770w,
-          https://res.cloudinary.com/dbeqp2lyo/image/upload/v1546030954/Portfolio/brxxto-346280-unsplash-1025w.jpg 1025w,
-          https://res.cloudinary.com/dbeqp2lyo/image/upload/v1546030955/Portfolio/brxxto-346280-unsplash-1920w.jpg 1920w,
-          https://res.cloudinary.com/dbeqp2lyo/image/upload/v1546030958/Portfolio/brxxto-346280-unsplash.jpg 2560w"
-        sizes="
-          (max-width: 460px) 460px,
-          (max-width: 770px) 770px,
-          (max-width: 1025px) 1025px,
-          (max-width: 1920px) 1920px,
-          2560px"
-        alt="Toronto">
-      <div class="wrapper">
+      <div class="main-wrapper">
         <h1 class="title">DEVANG PATEL</h1>
         <h2>Web Developer from Toronto, Ontario</h2>
         <div class="social-media">
-          <a href="https://github.com/dev637" aria-label="Github">
+          <a href="https://github.com/dev637" rel="noopener" aria-label="Github">
             <img class="svg" src="img/if_GitHub_1378045.svg" alt="Github icon"></a>
-          <a href="https://www.linkedin.com/in/devang-patel-79686556/" aria-label="Linkedin">
+          <a href="https://www.linkedin.com/in/devang-patel-79686556/" rel="noopener" aria-label="Linkedin">
             <img class="svg" src="img/if_LinkedIn_1378039.svg" alt="Linkedin icon"></a>
           <a href="mailto:devang713@gmail.com" aria-label="Mail">
             <img class="svg" src="img/if_Gmail_1378003.svg" alt="Mailto icon"></a>
         </div>
       </div>
+      <div class="sky"></div>
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+      <img id="skyline" class="svg" src="https://res.cloudinary.com/dbeqp2lyo/image/upload/v1552520686/Portfolio/toronto-3773752.svg" alt="Toronto skyline">
+      <img id="skyline-mobile" class="svg" src="https://res.cloudinary.com/dbeqp2lyo/image/upload/v1553364984/Portfolio/toronto-3773752-mobile.svg" alt="Toronto skyline mobile">
     </div>
 
     <nav id="Navbar">
       <div class="wrapper">
-        <a href="https://www.devangpatel.me">
+        <a href="https://www.devangpatel.me" rel="noopener">
           <div class="logo">
               DP
           </div>
@@ -59,11 +52,11 @@
 
         <div class="navbar_menu">
           <ul>
-            <li><a href="#Home" class="active" id="">Home</a></li>
-            <li><a href="#Projects" class="" id="">Projects</a></li>
-            <li><a href="#Skills" class="" id="">Skills</a></li>
-            <li><a href="#About" class="" id="">About</a></li>
-            <li><a href="#Contact" class="" id="">Contact</a></li>
+            <li><a href="#Home" class="active">Home</a></li>
+            <li><a href="#Projects" class="">Projects</a></li>
+            <li><a href="#Skills" class="">Skills</a></li>
+            <li><a href="#About" class="">About</a></li>
+            <li><a href="#Contact" class="">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -71,17 +64,17 @@
 
     <section class="projects page-section" id="Projects">
       <div class="wrapper">
-        <div class="page-section_banner">
+        <div class="page-section_banner" data-aos="fade-down">
           <h2>Projects</h2>
           <p>All projects were built with HTML5, CSS3, JavaScript, Babel, React, Git, and GitHub.</p>
         </div>
-        <div class="projects-container">
-          <div>
+        <div class="projects-container" >
+          <div data-aos="fade-up">
             <img class="lazyload" data-src="https://res.cloudinary.com/dbeqp2lyo/image/upload/v1544410887/Portfolio/Map_Quiz.jpg" alt="Map Quiz screenshot">
           </div>
 
-          <div>
-            <h3>Map Quiz</h3>
+          <div data-aos="fade-right" data-aos-delay="300">
+            <h3 >Map Quiz</h3>
             <p>This project was built using React along with the React-Simple-Maps library and using data from the Rest Countries api. It tests the user on world geography featuring quizzes on country names, capitals, and flags, using both click and type based inputs.</p>
             <ul class="projects-skills">
               <li>React Simple Maps</li>
@@ -95,18 +88,22 @@
               <li>GitHub</li>
             </ul>
             <div class="projects-links">
-              <a href="https://objective-ramanujan-b71cd2.netlify.com">Demo</a>
-              <a href="https://github.com/dev637/Map-Quiz">Github</a>
+              <a href="https://www.mapquiz.xyz/" rel="noopener">
+                <div>Demo</div>
+              </a>
+              <a href="https://github.com/dev637/Map-Quiz" rel="noopener">
+                <div>Github</div>
+              </a>
             </div>
           </div>
         </div>
 
         <div class="projects-container">
-          <div>
+          <div data-aos="fade-up">
             <img class="lazyload" data-src="https://res.cloudinary.com/dbeqp2lyo/image/upload/v1545936754/Portfolio/Indian_Restaurant.png" alt="Indian Restaurant screenshot">
           </div>
 
-          <div>
+          <div data-aos="fade-right" data-aos-delay="300">
             <h3>Indian Restaurant</h3>
             <p>This project was built using React and the Bulma css framework. It is a mockup of an Indian Restaurant that features the typical pages of a standard restaurant website and adheres to responsive web design.</p>
             <ul class="projects-skills">
@@ -122,18 +119,22 @@
               <li>GitHub</li>
             </ul>
             <div class="projects-links">
-              <a href="https://flamboyant-montalcini-3498b1.netlify.com">Demo</a>
-              <a href="https://github.com/dev637/Indian-Restaurant">Github</a>
+              <a href="https://www.indianrestaurant.xyz/" rel="noopener">
+                <div>Demo</div>
+              </a>
+              <a href="https://github.com/dev637/Indian-Restaurant" rel="noopener">
+                <div>Github</div>
+              </a>
             </div>
           </div>
         </div>
 
         <div class="projects-container">
-          <div>
+          <div data-aos="fade-up">
             <img class="lazyload" data-src="https://res.cloudinary.com/dbeqp2lyo/image/upload/v1545936755/Portfolio/Barbershop.png" alt="Barbershop screenshot">
           </div>
 
-          <div>
+          <div data-aos="fade-right" data-aos-delay="300">
             <h3>Barbershop</h3>
             <p>This project was built using React with the Gatsby development environment. It is a single page application mockup of a men's hair salon featuring the relevant sections for such a business and adheres to responsive web design.</p>
             <ul class="projects-skills">
@@ -148,8 +149,12 @@
               <li>GitHub</li>
             </ul>
             <div class="projects-links">
-              <a href="https://youthful-hopper-9cc47a.netlify.com/">Demo</a>
-              <a href="https://github.com/dev637/barbershop">Github</a>
+              <a href="https://www.mybarbershop.top/" rel="noopener">
+                <div>Demo</div>
+              </a>
+              <a href="https://github.com/dev637/barbershop" rel="noopener">
+                <div>Github</div>
+              </a>
             </div>
           </div>
         </div>
@@ -159,22 +164,22 @@
 
     <section class="skills page-section" id="Skills">
       <div class="wrapper">
-        <div class="page-section_banner page-section_banner-white">
+        <div class="page-section_banner" data-aos="fade-down">
           <h2>Skills</h2>
           <p>These are the following skills I have acquired and utilized on my personal projects. </p>
         </div>
 
-        <div class="skills-icons">
-          <img class="svg" src="img/skill_icons/html5-plain-wordmark.svg">
-          <img class="svg" src="img/skill_icons/css3-plain-wordmark.svg">
-          <img class="svg" src="img/skill_icons/javascript-plain.svg">
-          <img class="svg" src="img/skill_icons/jquery-plain-wordmark.svg">
-          <img class="svg" src="img/skill_icons/react-original-wordmark.svg">
-          <img class="svg" src="img/skill_icons/sass-original.svg">
-          <img class="svg" src="img/skill_icons/babel-plain.svg">
-          <img class="svg" src="img/skill_icons/git-plain-wordmark.svg">
-          <img class="svg" src="img/skill_icons/github-original-wordmark.svg">
-          <img class="svg" src="img/skill_icons/webpack-plain-wordmark.svg">
+        <div class="skills-icons" data-aos="fade-up" data-aos-delay="100">
+          <img class="svg" src="img/skill_icons/html5-plain-wordmark.svg" alt="html5-icon">
+          <img class="svg" src="img/skill_icons/css3-plain-wordmark.svg" alt="css3-icon">
+          <img class="svg" src="img/skill_icons/javascript-plain.svg" alt="javascript-icon">
+          <img class="svg" src="img/skill_icons/jquery-plain-wordmark.svg" alt="jquery-icon">
+          <img class="svg" src="img/skill_icons/react-original-wordmark.svg" alt="react-icon">
+          <img class="svg" src="img/skill_icons/sass-original.svg" alt="sass-icon">
+          <img class="svg" src="img/skill_icons/babel-plain.svg" alt="babel-icon">
+          <img class="svg" src="img/skill_icons/git-plain-wordmark.svg" alt="git-icon">
+          <img class="svg" src="img/skill_icons/github-original-wordmark.svg" alt="github-icon">
+          <img class="svg" src="img/skill_icons/webpack-plain-wordmark.svg" alt="webpack-icon">
         </div>
 
       </div>
@@ -182,16 +187,16 @@
 
     <section class="about page-section" id="About">
       <div class="wrapper">
-        <div class="page-section_banner">
+        <div class="page-section_banner" data-aos="fade-down">
           <h2>About Me</h2>
         </div>   
-        <div class="about-container">
+        <div class="about-container" data-aos="fade-up" data-aos-delay="100">
           <div>
             <p>
               Hello there! My name is Devang Patel and I'm a web developer from Toronto, Ontario. Having studied engineering in my undergrad I learned some aspects of computer science, and as a result, found web development to be an effective transition from my background into learning HTML, CSS, JS, React, and other tools to make dynamic and responsive websites. 
             </p>
             <p>
-              When I'm not working on personal projects, I enjoy watching movies and hockey, learning trivia and history, and lifting free weights to stay active. In general I'm always eager to learn and grow as a web developer so that I can make larger contributions, create better apps and be more helpful to others.
+              When I'm not working on personal projects, I enjoy watching movies and hockey, learning trivia and history, and lifting free weights to stay active. I'm always eager to learn and grow as a web developer in the hopes of improving my skills, making larger contributions, and creating better apps.
             </p>
           </div>
         </div>
@@ -200,16 +205,16 @@
 
     <section class="contact page-section" id="Contact">
       <div class="wrapper">
-        <div class="page-section_banner page-section_banner-white">
+        <div class="page-section_banner" data-aos="fade-down">
           <h2>Contact</h2>
           <p>Like what you see? Feel free to contact me via LinkedIn, email, or send me a message.</p>
         </div>
 
-        <div class="contact-row">
-          <form accept-charset=" UTF-8" action="https://usebasin.com/f/e7bc73299859" class="contact-form" method="POST">
+        <div class="contact-row" data-aos="fade-up" data-aos-delay="100">
+          <form accept-charset="utf-8" action="https://usebasin.com/f/e7bc73299859" class="contact-form" method="POST">
             <div class="contact-form-top">
-              <div class="contact-form-top-name"><label for="name">Name *<input type="text" placeholder="--" id="name" name="name" autocomplete="nope" required/></label></div>
-              <div class="contact-form-top-email"><label for="email">Email *<input type="email" placeholder="--" id="email" name="email" autocomplete="nope" required/></label></div>
+              <div class="contact-form-top-name"><label for="name">Name *<input type="text" placeholder="--" id="name" name="name" autocomplete="off" required/></label></div>
+              <div class="contact-form-top-email"><label for="email">Email *<input type="email" placeholder="--" id="email" name="email" autocomplete="off" required/></label></div>
             </div>
             <div><label for="subject">Subject<input type="text" placeholder="--" id="subject" name="subject"/></label></div>
             <div><label for="message">Message *</label><textarea rows="7" placeholder="--" id="message" name="message" required></textarea></div>
@@ -222,8 +227,8 @@
     <footer class="footer">
       <div class="wrapper">
         <div class="social-media">
-          <a href="https://github.com/dev637" aria-label="Github"><img class="svg" src="img/if_GitHub_1378045.svg" alt="Github icon"></a>
-          <a href="https://www.linkedin.com/in/devang-patel-79686556/" aria-label="Linkedin"><img class="svg" src="img/if_LinkedIn_1378039.svg" alt="Linkedin icon"></a>
+          <a href="https://github.com/dev637" rel="noopener" aria-label="Github"><img class="svg" src="img/if_GitHub_1378045.svg" alt="Github icon"></a>
+          <a href="https://www.linkedin.com/in/devang-patel-79686556/" rel="noopener" aria-label="Linkedin"><img class="svg" src="img/if_LinkedIn_1378039.svg" alt="Linkedin icon"></a>
           <a href="mailto:devang713@gmail.com" aria-label="Mail"><img class="svg" src="img/if_Gmail_1378003.svg" alt="Mailto icon"></a>
         </div>
         <p>Copyright © 2018 Devang Patel. All rights reserved.</p>
@@ -231,6 +236,7 @@
     </footer>
 
     <!-- jQuery -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="jquery-3.2.1.min.js"></script>
     <script src="/dist/global.bundle.js"></script>
 

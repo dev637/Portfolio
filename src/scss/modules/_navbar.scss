@@ -2,12 +2,11 @@ nav {
   top: 0;
   width: 100%;
   position: fixed;
-  z-index: 1;
-  transition: .2s;
+  z-index: 999;
+  transition: 0.2s;
   height: 48px;
   font-family: 'Raleway', sans-serif;
-  background: #2E2E2E;
-  
+
   .wrapper {
     padding: 0;
 
@@ -16,45 +15,20 @@ nav {
     }
   }
 
-  @include medium-navbar {
-    background: none;
-  }
-
   ul {
     padding-left: 0;
     list-style: none;
-    transition: .2s;
+    transition: 0.2s;
     max-height: 0px;
     overflow: hidden;
     clear: both;
-    background: rgba(255, 255, 255, 0.4);
-    
+
     position: absolute;
     width: 100%;
     top: 30px;
 
     li {
       background: rgba(0, 0, 0, 0.7);
-
-      :after {
-        position: absolute;
-        display: block;
-        content: '';
-        width: 5px;
-        height: 100%;
-        left: 0;
-        bottom: 0;
-        background: $accent-color;
-        transition: all .4s ease;
-        z-index: -1;
-      }
-
-      &:hover:not(.active) {
-        :after {
-          width: 100%;
-        }
-      }
-        
     }
 
     @include medium-navbar {
@@ -68,20 +42,40 @@ nav {
       max-height: 48px;
       overflow: visible;
       clear: none;
-    
+
       li {
         background: none;
         float: left;
+      }
 
-        :after {
-          width: 100%;
-          height: 5px;
-          right: 0;
+      li > a {
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 8px;
+          width: 0px;
+          height: 3px;
+          transition: all 0.2s ease-in-out;
+          transition-duration: 0.5s;
+          opacity: 0;
         }
 
-        &:hover:not(.active) {
-          :after {
-            height: 100%;
+        &:before {
+          left: calc(50%);
+          background: $thirdcol;
+        }
+
+        &:after {
+          right: calc(50%);
+          background: $thirdcol;
+        }
+
+        &:hover {
+          &:before,
+          &:after {
+            width: 40%;
+            opacity: 1;
           }
         }
       }
@@ -100,27 +94,31 @@ nav {
     color: white;
     letter-spacing: 2px;
     font-weight: 700;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     z-index: 3;
   }
 }
 
 .active {
-  background-color: $accent-color;
+  color: $thirdcol;
+
+  &:before,
+  &:after {
+    width: 40%;
+    opacity: 1;
+  }
 }
 
 .logo {
   display: block;
   float: left;
-  color: $accent-color;
-  color: white;
+  color: $thirdcol;
   font-size: 2.5rem;
   font-weight: 700;
-  transition: .2s;
+  transition: 0.2s;
   position: absolute;
   margin: 0;
   padding: 0 5px;
-  background: $accent-color;
 
   @include medium-navbar {
     left: 0;
@@ -130,10 +128,9 @@ nav {
 }
 
 .dark-nav {
-  background: #202124;
+  background: linear-gradient(to left, $firstcol, $secondcol);
 
   ul {
-    background: none;
 
     @include medium-navbar {
       margin: 0;
@@ -150,7 +147,7 @@ nav {
 .navbar_button {
   position: absolute;
   right: 14px;
-  transition: .2s;
+  transition: 0.2s;
   top: -4px;
 
   button {

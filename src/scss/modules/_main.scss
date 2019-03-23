@@ -2,69 +2,142 @@
 	position: relative;
   color: white;
   height: 100vh;
-	background: black;
-	
-	> img {
-		position: absolute;
-		left: 0;
-		top: 0;
+
+	#skyline, #skyline-mobile {
+    position: absolute;
+    left: 0;
+    bottom: 0;
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: top center;
-		filter: saturate(0) brightness(0.5);
+		z-index: 2;
+    filter: drop-shadow( 3px 3px 3px black);
 	}
 
-	.wrapper {
-		transform: translateY(25vh);
-		h1 {
-	  	font-size: 17vw;
-	  	font-weight: 700;
-	  	margin: 0 auto;
-	  }
+  #skyline {
+    display: none;
+    @include atMedium {
+      display: block;
+    }
+  }
+  
+  #skyline-mobile {
+    bottom: 1rem;
+    @include atMedium {
+      display: none;
+    }
+  }
+
+  // rectangular block to cover gap between mobile version of skyline and next section
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2rem;
+    background: white;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+
+    @include atMedium {
+      display: none;
+    }
+  }
+
+	.stars, .twinkling, .sky {
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		width:100%;
+		height:100%;
+		display:block;
+	}
+
+  .sky {
+    background: linear-gradient(#03001e, #7303c0, #ff41cc);
+    z-index: 2;
+    opacity: 0.5;
+  }
+
+	@keyframes move-twink-back {
+		from {background-position:0 0;}
+		to {background-position:-10000px 5000px;}
+	}
+	@-webkit-keyframes move-twink-back {
+			from {background-position:0 0;}
+			to {background-position:-10000px 5000px;}
+	}
+	@-moz-keyframes move-twink-back {
+			from {background-position:0 0;}
+			to {background-position:-10000px 5000px;}
+	}
+	@-ms-keyframes move-twink-back {
+			from {background-position:0 0;}
+			to {background-position:-10000px 5000px;}
+	}
+
+	.stars {
+		background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+		z-index:0;
+	}
 	
-	  h2 {
-	  	font-size: 4vw;
-	  	font-weight: 100;
-	  	margin: .5rem auto;
-	  }
+	.twinkling{
+		background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+		z-index:1;
+	
+		-moz-animation:move-twink-back 200s linear infinite;
+		-ms-animation:move-twink-back 200s linear infinite;
+		-o-animation:move-twink-back 200s linear infinite;
+		-webkit-animation:move-twink-back 200s linear infinite;
+		animation:move-twink-back 200s linear infinite;
+	}
+
+  &-wrapper {
+    position: relative;
+    z-index: 3;
+    transform: translateY(10vh);
+    h1 {
+      font-size: 17vw;
+      font-weight: 700;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 4vw;
+      font-weight: 100;
+      margin: 0.5rem auto;
+    }
 
     svg {
       fill: white;
       border: 1px solid white;
 
       &:hover {
-        fill: black;
-        background: white;
-      }     
+        border-color: $thirdcol;
+        background: $thirdcol;
+      }
     }
 
-	  @include atSmall {
-	  	h1 {
-	  		width: 100%;
-	  		font-size: calc(78px + 76 * ((100vw - 460px) / 1460));
-	  	}
+    @include atSmall {
+      h1 {
+        width: 100%;
+        font-size: calc(78px + 76 * ((100vw - 460px) / 1460));
+      }
 
-	  	h2 {
-	  		width: 100%;
-	  		font-size: calc(18px + 20 * ((100vw - 460px) / 1460));
-	  	}
-	  }
+      h2 {
+        width: 100%;
+        font-size: calc(18px + 20 * ((100vw - 460px) / 1460));
+      }
+    }
 
-	  @include medium-navbar {
-	  	div {
-	  		padding: 50px;
-	  	}
-	  }
+    @include atXlarge {
+      h1 {
+        font-size: 154px;
+      }
 
-	  @include atXlarge {
-	  	h1 {
-	  		font-size: 140px;
-	  	}
-
-	  	h2 {
-	  		font-size: 2.5rem;
-	  	}
-	  }
-	}
+      h2 {
+        font-size: 38px;
+      }
+    }
+  }
 }

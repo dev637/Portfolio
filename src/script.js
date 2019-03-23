@@ -2,9 +2,12 @@
 
 require('./scss/style.scss');
 require('normalize.css');
-require('../index.html');
 require('./app.js');
 
+AOS.init({
+	once: 'false',
+	anchorPlacement: 'bottom-top'
+});
 console.log('foo');
 
 if (module.hot) {
