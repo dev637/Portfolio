@@ -3,7 +3,7 @@
   color: white;
   height: 100vh;
 
-	#skyline {
+	#skyline, #skyline-mobile {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -11,6 +11,36 @@
 		z-index: 2;
     filter: drop-shadow( 3px 3px 3px black);
 	}
+
+  #skyline {
+    display: none;
+    @include atMedium {
+      display: block;
+    }
+  }
+  
+  #skyline-mobile {
+    bottom: 1rem;
+    @include atMedium {
+      display: none;
+    }
+  }
+
+  // rectangular block to cover gap between mobile version of skyline and next section
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2rem;
+    background: white;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+
+    @include atMedium {
+      display: none;
+    }
+  }
 
 	.stars, .twinkling, .sky {
 		position:absolute;
