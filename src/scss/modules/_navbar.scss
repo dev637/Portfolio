@@ -128,7 +128,7 @@ nav {
 }
 
 .dark-nav {
-  background: linear-gradient(to left, $firstcol, $secondcol);
+  background: darken($firstcol, 10%);
 
   ul {
 
