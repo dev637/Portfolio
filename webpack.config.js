@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const mode = process.env.PRODUCTION_MODE || 'development';
 
@@ -53,7 +54,31 @@ module.exports = {
             proxy: 'http://localhost:8080/',
         }, { reload: false }),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+        new ManifestPlugin({
+            fileName: 'manifest.json',
+            seed: {
+                "short_name": "PortfolioDP",
+                "name": "Devang Patel - Portfolio",
+                "icons": [
+                  {
+                    "src": "/src/assets/icon.png",
+                    "type": "image/png",
+                    "sizes": "512x512"
+                  },
+                  {
+                    "src": "/src/assets/large-icon.png",
+                    "type": "image/png",
+                    "sizes": "1024x1024",
+                  }
+                ],
+                "start_url": "localhost:3000",
+                "background_color": "#350058",
+                "display": "standalone",
+                "scope": "localhost:3000",
+                "theme_color": "#350058"
+            }
+        })
     ],
     devtool: (mode === 'development') ? 'inline-source-map' : '',
     devServer: {
