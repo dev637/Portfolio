@@ -118,12 +118,17 @@ nav {
   transition: 0.2s;
   position: absolute;
   margin: 0;
-  padding: 0 5px;
+  padding: 3px 5px 0;
 
   @include medium-navbar {
     left: 0;
     position: relative;
     margin: 16px 0;
+  }
+
+  svg {
+    height: 32px;
+    width: auto;
   }
 }
 
