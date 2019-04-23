@@ -129,6 +129,19 @@ nav {
   svg {
     height: 32px;
     width: auto;
+
+    path {
+      fill: #ff4500;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      path {
+        transition: 0.2s ease;
+
+        fill: white;
+      }
+    }
   }
 }
 
