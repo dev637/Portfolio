@@ -131,15 +131,27 @@ nav {
     width: auto;
 
     path {
-      fill: #ff4500;
       transition: 0.2s ease;
-    }
 
-    &:hover {
+      &.letterD {
+        fill: #ff4500;
+      }
+
+      &.letterP {
+        fill: white;
+      }
+    }
+  }
+
+  &:hover {
+    background: white;
+    svg {
       path {
         transition: 0.2s ease;
 
-        fill: white;
+        &.letterP {
+          fill: #350058;
+        }
       }
     }
   }
@@ -149,7 +161,6 @@ nav {
   background: darken($firstcol, 10%);
 
   ul {
-
     @include medium-navbar {
       margin: 0;
     }
