@@ -58,24 +58,19 @@ module.exports = {
         new ManifestPlugin({
             fileName: 'manifest.json',
             seed: {
-                "short_name": "PortfolioDP",
+                "short_name": "DevPortfolio",
                 "name": "Devang Patel - Portfolio",
                 "icons": [
                   {
-                    "src": "/src/assets/icon.png",
+                    "src": "/img/Logo.png",
                     "type": "image/png",
-                    "sizes": "512x512"
+                    "sizes": "300x300"
                   },
-                  {
-                    "src": "/src/assets/large-icon.png",
-                    "type": "image/png",
-                    "sizes": "1024x1024",
-                  }
                 ],
-                "start_url": "localhost:3000",
+                "start_url": ".",
                 "background_color": "#350058",
                 "display": "standalone",
-                "scope": "localhost:3000",
+                "scope": ".",
                 "theme_color": "#350058"
             }
         })
