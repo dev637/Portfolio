@@ -118,20 +118,49 @@ nav {
   transition: 0.2s;
   position: absolute;
   margin: 0;
-  padding: 0 5px;
+  padding: 3px 5px 0;
 
   @include medium-navbar {
     left: 0;
     position: relative;
     margin: 16px 0;
   }
+
+  svg {
+    height: 32px;
+    width: auto;
+
+    path {
+      transition: 0.2s ease;
+
+      &.letterD {
+        fill: #ff4500;
+      }
+
+      &.letterP {
+        fill: white;
+      }
+    }
+  }
+
+  &:hover {
+    background: white;
+    svg {
+      path {
+        transition: 0.2s ease;
+
+        &.letterP {
+          fill: #350058;
+        }
+      }
+    }
+  }
 }
 
 .dark-nav {
-  background: linear-gradient(to left, $firstcol, $secondcol);
+  background: darken($firstcol, 10%);
 
   ul {
-
     @include medium-navbar {
       margin: 0;
     }
