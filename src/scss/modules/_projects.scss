@@ -2,7 +2,7 @@
   position: relative;
   z-index: 3;
   background: white;
-  
+
   h3 {
     font-size: 2.2rem;
     margin: 0;
@@ -55,7 +55,6 @@
     }
 
     @include atMedium {
-
       div:first-child {
         text-align: right;
       }
@@ -78,16 +77,15 @@
     padding-bottom: 1.3rem;
     margin: 0 auto;
     list-style: none;
-    font-size: .9rem;
+    font-size: 0.9rem;
     max-width: 430px;
-    
+
     li {
       color: white;
-      background: $secondcol;
+      background: $firstcol;
       border-radius: 1rem;
-      padding: .2rem .7rem;
-      margin: .45rem .5rem;
-      box-shadow: 3px 3px $thirdcol;
+      padding: 0.2rem 0.7rem;
+      margin: 0.45rem 0.5rem;
     }
 
     @include atMedium {
@@ -96,7 +94,7 @@
       max-width: 100%;
 
       li {
-        margin: .45rem 1rem .45rem 0;
+        margin: 0.45rem 1rem 0.45rem 0;
       }
     }
   }
@@ -104,10 +102,10 @@
   &-links {
     display: flex;
     justify-content: center;
-    
+
     a {
       text-decoration: none;
-      
+
       div {
         position: relative;
         overflow: hidden;
@@ -116,27 +114,23 @@
         text-transform: uppercase;
         padding: 0.28rem 1rem;
         margin: 0 1rem;
-        border: 3px solid darken($firstcol, 10%);
-        color: white;
-        background: $firstcol;
-        transition: all .5s ease;
-        
-        &:after {
-          position: absolute;
-          content: '';
-          top: -20px;
-          left: -100px;
-          height: 5rem;
-          transform: rotate(45deg);
-          box-shadow: 0 0 10px 15px white;
-          opacity: 0.4;
-          transition: all .5s ease;
-        }
+        color: $thirdcol;
+        box-shadow: inset 0 0 0 2px $thirdcol, 0 3px $thirdcol,
+          0 0 0px lightgray;
+        transition: all 0.5s ease;
 
-        &:hover:after {
-          left: 150px;
+        &:hover {
+          // transform: scale(1.1);
+          box-shadow: inset 0 0 0 2px $thirdcol, 0 3px $thirdcol,
+            0 8px 10px lightgray;
+
+          &:active {
+            transform: translateY(3px);
+            box-shadow: inset 0 0 0 2px $thirdcol, 0 0px $thirdcol,
+              0 5px 5px lightgray;
+          }
         }
-      }      
+      }
     }
   }
 }
