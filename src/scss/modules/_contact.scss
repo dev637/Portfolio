@@ -1,4 +1,4 @@
-$contact-bg: #f1f1f1;
+$contact-bg: white;
 
 .contact {
   background: $contact-bg;
@@ -38,7 +38,6 @@ $contact-bg: #f1f1f1;
       width: 100%;
       padding: .4rem;
       margin-top: 1rem;
-      border: $contact-bg;
   	}
 
     ::placeholder {
