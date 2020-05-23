@@ -3,6 +3,8 @@
 require('./scss/style.scss');
 require('normalize.css');
 require('./app.js');
+require('../img/index');
+require('../img/skill_icons/index');
 
 AOS.init({
 	once: 'false',

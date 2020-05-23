@@ -35,7 +35,7 @@ module.exports = {
                 }
             }, {
                 test: /\.svg$/,
-                loader: 'svg-loader' // 👈 Add loader
+                loader: 'svg-inline-loader?classPrefix' // 👈 Add loader
             }
         ]
     },
