@@ -20,15 +20,13 @@
     align-items: center;
     padding: 4rem 0;
 
-    img {
-      box-shadow: 0 0 5rem #b3b3b3;
-    }
-
     &:last-child {
       padding-bottom: 37px;
     }
 
     > div {
+      width: 100%;
+      
       p {
         text-align: left;
         margin: 0 auto;

@@ -3,6 +3,7 @@
 require('./scss/style.scss');
 require('normalize.css');
 require('./app.js');
+require('./progressive_image.js');
 require('../img/index');
 require('../img/skill_icons/index');
 
